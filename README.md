@@ -30,7 +30,11 @@ brew install coccinelle (version 1.3.1)
 brew info coccinelle
 ```
 
-The first demonstration is using ```demo1.c``` and ```log_update.cocci```. This will show how easy it is to update something like an API call when needs change. First, run the following command ```$ spatch --sp-file log_update1.cocci demo1.c```. ```spatch``` ensures that we are using coccinelle ```--sp-file``` use the semantic patch rules in the file ```log_update1.cocci``` and ```demo1.c``` is your target file. Run this and you should get an output that looks like this. 
+The first demonstration is using ```demo1.c``` and ```log_update.cocci```. This will show how easy it is to update something like an API call when needs change. First, run the following command ```$ spatch --sp-file log_update.cocci demo1.c```.  
+`spatch` runs Coccinelle.  
+`--sp-file` tells Coccinelle which semantic patch file to use.  
+`demo1.c` is the target C source file being checked or transformed.  
+Run this and you should get an output that looks like this. 
 
 ![alt text](images/image.png)
 

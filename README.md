@@ -22,11 +22,11 @@ A simple way to install Coccinelle on Ubuntu, WSL or MAC OS is:
 ```bash
 LINUX
 sudo apt update
-sudo apt install coccinelle (version 1.1.1)
+sudo apt install coccinelle
 spatch --version
 
-MAC (Homebrew Method Verified)
-brew install coccinelle (version 1.3.1)
+macOS (Homebrew Method Verified)
+brew install coccinelle
 brew info coccinelle
 ```
 
@@ -38,7 +38,7 @@ Run this and you should get an output that looks like this.
 
 ![alt text](images/image.png)
 
-This is nice because it verifies the file to be operated on, and shows a diff of what changes are to occur. Notice that this is done without compilation and only looking at the form of the code itself.
+This is nice because it verifies the file to be operated on, and shows a diff of what changes are to occur. Notice that this is done without compiling the program. Coccinelle works by matching code patterns and forms.
 
 ## Make The Changes
 Now if we want to set these changes we have 2 general options the first is to create a new file using the command ```$ spatch --sp-file log_update.cocci demo1.c -o demo1_updated.c```. This will create a new file under the name demo1_updated.c.

@@ -32,7 +32,7 @@ brew info coccinelle
 
 The first demonstration is using ```demo1.c``` and ```log_update.cocci```. This will show how easy it is to update something like an API call when needs change. First, run the following command ```$ spatch --sp-file log_update1.cocci demo1.c```. ```spatch``` ensures that we are using coccinelle ```--sp-file``` use the semantic patch rules in the file ```log_update1.cocci``` and ```demo1.c``` is your target file. Run this and you should get an output that looks like this. 
 
-![alt text](image.png)
+![alt text](images/image.png)
 
 This is nice because it verifies the file to be operated on, and shows a diff of what changes are to occur. Notice that this is done without compilation and only looking at the form of the code itself.
 
@@ -45,4 +45,4 @@ If we want overwrite this file we will use the command ```$ spatch --sp-file log
 
 
 ## List Of Commands
-![alt text](image-1.png)
+![alt text](images/image-1.png)

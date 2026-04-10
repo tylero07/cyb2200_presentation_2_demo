@@ -5,7 +5,7 @@ void old_log(const char *credentials) {
 }
 
 void new_log(const char *credentials) {
-    printf("NEW LOG: [REDACTED/SECURE] %s\n", credentials);
+    printf("NEW LOG: [Super Secret Stuff] %s\n", credentials);
 }
 
 int main(void) {

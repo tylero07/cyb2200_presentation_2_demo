@@ -35,3 +35,10 @@ The first demonstration is using ```demo1.c``` and ```log_update.cocci```. This 
 ![alt text](image.png)
 
 This is nice because it verifies the file to be operated on, and shows a diff of what changes are to occur. Notice that this is done without compilation and only looking at the form of the code itself.
+
+## Make The Changes
+Now if we want to set these changes we have 2 general options the first is to create a new file using the command ```$ spatch --sp-file log_update.cocci demo1.c -o demo1_updated.c```. This will create a new file under the name demo1_updated.c.  
+
+If we want overwrite this file we will use the command ```$ spatch --sp-file log_update.cocci --in-place demo1.c```
+
+    Note: This may take some time to finish

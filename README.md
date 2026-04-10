@@ -8,17 +8,24 @@ This project is a short introduction to **Coccinelle**, a tool used for matching
 This does **not** represent the full set of features or real-world use cases of Coccinelle. Instead, this is a short explanation and demonstration of how Coccinelle can use **pattern matching** to find and update repeated forms in C source files.
 
 ## What Coccinelle Does
-Coccinelle is a tool for working with C code using rules written in **SmPL** (Semantic Patch Language). These rules can be used to:
+Coccinelle is a tool for working with code (C/C++ examples for this class) using rules written in **SmPL** (Semantic Patch Language). These rules can be used to:
 
 - find repeated code patterns
 - check for specific code forms
 - automatically transform matching code
 
-In basic terms, Coccinelle acts like a code-aware search-and-rewrite tool for C.
+In basic terms, Coccinelle acts like a smart search-and-rewrite tool.
 
 ## Installation
-A simple way to install Coccinelle on Ubuntu or WSL is:
+A simple way to install Coccinelle on Ubuntu, WSL or MAC OS is:
 
 ```bash
+LINUX
 sudo apt update
-sudo apt install coccinelle
+sudo apt install coccinelle (version 1.1.1)
+spatch --version
+
+MAC (Homebrew Method Verified)
+brew install coccinelle (version 1.3.1)
+brew info coccinelle
+```

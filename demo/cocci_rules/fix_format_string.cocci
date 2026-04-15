@@ -1,10 +1,8 @@
 // Rule: fix_format_string.cocci
 // PATCH mode — wraps printf(var) with printf("%s", var)
-// Forces the format string to be a literal, eliminating the attack surface
-// Covered in: CYB2200 L7/L8 Format String Vulnerability
 //
-// Run (dry):  spatch --sp-file fix_format_string.cocci vulnerable.c
-// Run (apply): spatch --sp-file fix_format_string.cocci --in-place vulnerable.c
+// Run (dry):  spatch --sp-file cocci_rules/fix_format_string.cocci c_files/vulnerable.c
+// Run (apply): spatch --sp-file cocci_rules/fix_format_string.cocci --in-place c_files/vulnerable.c
 
 @@
 expression E;

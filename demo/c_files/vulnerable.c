@@ -36,13 +36,18 @@ void log_event(char *user_input) {
     printf(user_input);   /* UNSAFE: user controls format string */
 }
 
+/* -------------------------------------------------------
+ * REFACTOR: 3 args to 2.
+ * ------------------------------------------------------- */
+void foo(int a, int b, int c) {
+    printf("a=%d b=%d c=%d\n", a, b, c); 
+}
+// void foo(int a, int b) {
+//     printf("a=%d b=%d\n", a, b); 
+// }
+
 
 int main(int argc, char *argv[]) {
-    read_username();
-    if (argc > 1) {
-        copy_input(argv[1]);
-        log_event(argv[1]);
-    }
-    build_message("Alice", 42);
+    foo(1, 2, 3); 
     return 0;
 }

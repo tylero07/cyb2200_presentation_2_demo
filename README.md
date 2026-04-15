@@ -22,6 +22,7 @@ A simple way to install Coccinelle on Ubuntu, WSL or MAC OS is:
 ```bash
 LINUX
 sudo apt update
+sudo apt upgrade
 sudo apt install coccinelle
 spatch --version
 

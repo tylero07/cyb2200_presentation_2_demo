@@ -5,7 +5,7 @@
 /* -------------------------------------------------------
  * VULNERABILITY 1: gets() — unbounded input, no size check
  * ------------------------------------------------------- */
-void read_username() {
+void example1() {
     char buf[64];
     gets(buf);   /* UNSAFE: no bounds checking whatsoever */
     printf("Hello, %s\n", buf);
@@ -14,7 +14,7 @@ void read_username() {
 /* -------------------------------------------------------
  * VULNERABILITY 2: strcpy() — unbounded copy
  * ------------------------------------------------------- */
-void copy_input(char *user_input) {
+void example2(char *user_input) {
     char dest[32];
     strcpy(dest, user_input);   /* UNSAFE: src may be longer than dest */
     printf("Copied: %s\n", dest);
@@ -23,7 +23,7 @@ void copy_input(char *user_input) {
 /* -------------------------------------------------------
  * VULNERABILITY 3: sprintf() — unbounded format write
  * ------------------------------------------------------- */
-void build_message(char *name, int code) {
+void example3(char *name, int code) {
     char msg[32];
     sprintf(msg, "User %s has code %d", name, code);   /* UNSAFE: no size limit */
     puts(msg);
@@ -32,7 +32,7 @@ void build_message(char *name, int code) {
 /* -------------------------------------------------------
  * VULNERABILITY 4: printf(user_input) — format string vulnerability
  * ------------------------------------------------------- */
-void log_event(char *user_input) {
+void example4(char *user_input) {
     printf(user_input);   /* UNSAFE: user controls format string */
 }
 
